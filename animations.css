@@ -1,0 +1,39 @@
+/* 
+ * I have a "clock" div element and applied the animation css on it but
+ * I could also have applied it to the body element directly
+ */
+ #clock { 
+    -webkit-animation: clock 1ms alternate infinite; 
+    -moz-animation: clock 1ms alternate infinite; 
+    -o-animation: clock 1ms alternate infinite; 
+    -ms-animation: clock 1ms alternate infinite; 
+    animation: clock 1ms alternate infinite; 
+}
+
+/*
+ * For that to work correctly in Opera and Firefox
+ * we need at least the 100% key frame with a property set. I've just put
+ * a dummy property so it works.
+ */
+@-o-keyframes clock {
+    100% { color:#000; }
+} 
+@-moz-keyframes clock {
+    100% { color:#000; }
+} 
+/*
+ * In webkit browsers, no property is necessary
+ */
+@-webkit-keyframes clock {
+    100% {}
+} 
+/*
+ * @todo: test on IE
+*/
+@-ms-keyframes clock {
+    100% {}
+} 
+@keyframes clock {
+    0% { color:#000; }
+    100% { color:#000; }
+} 
