@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="pomodoro timer/styles.css" />
     <script defer src="script.js"></script>
+    <script defer src="flashcard/script.js"></script>
     
   </head>
 
@@ -62,55 +63,57 @@
       </div>
     </div>
 
-    <progress id="js-progress" value="0"></progress>
     <div class="timer-area">
-    <div class="progress-bar"></div>
       <div class="timer">
-      <div class="timer-area"
-        <div class="button-group mode-buttons" id="js-mode-buttons">
-          <button
-            data-mode="pomodoro"
-            class="button active mode-button"
-            id="js-pomodoro"
-          >
-            Pomodoro
-          </button>
-          <button
-            data-mode="shortBreak"
-            class="button mode-button"
-            id="js-short-break"
-          >
-            Short break
-          </button>
-          <button
-            data-mode="longBreak"
-            class="button mode-button"
-            id="js-long-break"
-          >
-            Long break
+        <div class="timer">
+          <div class="button-group mode-buttons" id="js-mode-buttons">
+            <button
+              data-mode="pomodoro"
+              class="button active mode-button"
+              id="js-pomodoro"
+            >
+              Pomodoro
+            </button>
+            <button
+              data-mode="shortBreak"
+              class="button mode-button"
+              id="js-short-break"
+            >
+              Short break
+            </button>
+            <button
+              data-mode="longBreak"
+              class="button mode-button"
+              id="js-long-break"
+            >
+              Long break
+            </button>
+          </div>
+          <div class="clock" id="js-clock">
+            <span id="js-minutes">25</span>
+            <span class="separator">:</span>
+            <span id="js-seconds">00</span>
+          </div>
+          <button class="main-button" data-action="start" id="js-btn">
+            Start
           </button>
         </div>
-        <div class="clock" id="js-clock">
-          <span id="js-minutes">25</span>
-          <span class="separator">:</span>
-          <span id="js-seconds">00</span>
-        </div>
-        <button class="main-button" data-action="start" id="js-btn">
-          Start
-        </button>
-      </div>
-    </div>
+      </main>
+      
 
-   
     </div>
     <template id="task-template">
       <div class="task">
         <input type="checkbox" />
         <label>
           <span class="custom-checkbox"></span>
+          <span class="task-name" data-task-name></span>
         </label>
+          <button class="btn create" aria-label="create new quiz">Add Quiz</button>
+        </form>
       </div>
       <script src="main.js"></script>
     </template>
+      
   </body>
 </html>

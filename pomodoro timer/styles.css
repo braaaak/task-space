@@ -30,32 +30,11 @@ body {
   transition: background-color 1s ease;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   user-select: none;
-}
-
-progress {
-  border-radius: 2px;
-  width: 100%;
-  height: 12px;
-  position: fixed;
-  top: 0;
-}
-
-progress::-webkit-progress-bar {
- background-color: rgba(0, 0, 0, 0.1);;
-}
-
-progress::-webkit-progress-value {
-  background-color: #fff;
+  padding-right: 0%;
 }
 
 .timer {
-  text-align: center;
-  
-}
-
-.timer-area {
-  padding-top: 5%;
-  grid-area: timer;
+  text-align: center; 
 }
 
 .clock {
@@ -67,24 +46,24 @@ progress::-webkit-progress-value {
   align-items: center;
   font-family: arial, sans-serif;
   text-align: center;
+  padding-right: 5%;
 }
 
 .mode-button {
-  font-size: 16px;
+  font-size: 1.2rem;
   height: 28px;
   cursor: pointer;
-  box-shadow: none;
-  font-weight: 300;
   color: #fff;
-  border: 1px solid transparent;
   margin: 0px;
-  border-radius: 4px;
   padding: 2px 12px;
   background: none;
+  border: none;
+  font-family: inherit;
 }
 
 .mode-button.active {
-  border-color: #fff;
+  font-weight: 800;
+  border: none;
 }
 
 .main-button {
@@ -106,7 +85,7 @@ progress::-webkit-progress-value {
 }
 
 button:focus, button:active {
-  outline: none;
+  font-weight: 800;
 }
 
 .main-button.active {

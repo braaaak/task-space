@@ -1,0 +1,129 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    background: #f7f9fd;
+  }
+  
+  button{
+    font-size: medium;
+    font: inherit;
+    width: 15%;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #587ff430;
+    border-radius: 5px;
+    background: #587ff462;
+    box-shadow: 0 1em 1em rgba(28, 0, 80, 0.061);
+  }
+  
+  form{
+    display: flex;
+  }
+  
+  button:hover{
+    background-color: #587ef4;
+  }
+  
+  .container{
+    width: 1280px;
+    position: relative;
+    padding: 30px;
+  
+  }
+  
+  #create_card{
+    display: none;
+    width: 370px;
+    margin:auto;
+    padding: 50px;
+    margin-top: 10px;
+    background: hsl(0, 0%, 96%);
+    border-radius: 6px;
+    box-shadow: 0 3em 3em rgba(28, 0, 80, 0.176);
+  }
+  
+  #create_card h2{
+    color: #587ef4;
+    text-align: center;
+  }
+  
+  #create_card textarea{
+    width: 100%;
+    border-radius: 1px;
+    font-family: inherit;
+    border: 1px solid #01010130;
+    border-radius: 5px;
+    resize: none;
+  }
+  
+  #create_card button{width: fit-content;}
+  
+  #flashcards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    padding: 0px 10px;
+    border-radius: 5px;
+  }
+  
+  .flashcard{
+    width: 370px;
+    height: 200px;
+    word-wrap: break-word;
+    margin: 10px; 
+    background:#fff;
+    cursor: pointer;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 3em 3em rgba(28, 0, 80, 0.176);
+  }
+  
+  .flashcard h2{font-size: 1rem;}
+  
+  .fa-minus{
+    top: 3%;
+    right: 2%;
+    position: absolute;
+    color: #587ef4;
+    transition: 0.3s ease-out;
+  }
+  
+  .fa-minus:hover{color: #4d4d4d;}
+  
+  @media(max-width:1280px){
+    .container{width: 100%;}
+  }
+  
+  @media(max-width:768px){
+    .flashcard{margin: auto;}
+  
+    .flashcard{
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media(max-width:480px){
+    #header{
+      padding: 20px;
+      gap: 10px;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #create_card{width: 95%;}
+  
+    .flashcard{width: 100%;}
+  
+  }
